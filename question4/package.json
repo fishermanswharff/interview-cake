@@ -1,7 +1,7 @@
 {
   "name": "interview-cake-question4",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "solutions and testing suite for interview cake’s question 4.",
   "main": "karma.conf.js",
   "dependencies": {},
   "devDependencies": {

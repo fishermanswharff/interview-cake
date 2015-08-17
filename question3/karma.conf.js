@@ -1,22 +1,34 @@
 // Karma configuration
-// Generated on Sat Aug 15 2015 12:15:19 GMT-0400 (EDT)
+// Generated on Sun Aug 16 2015 15:09:12 GMT-0400 (EDT)
 
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['browserify','jasmine'],
     files: [
-      'spec/*.js',
-      'lib/*.js'
+      'lib/**/*.js',
+      'spec/**/*.js'
+    ],
+    plugins: [
+      'karma-browserify',
+      'karma-jasmine',
+      'karma-phantomjs-launcher'
     ],
     exclude: [],
-    preprocessors: {},
+    preprocessors: {
+      'lib/**/*.js': ['browserify'],
+      'spec/**/*.js': ['browserify']
+    },
+    browserify: {
+      debug: true,
+      transform: ['babelify'],
+    },
     reporters: ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: false
-  });
-};
+  })
+}
