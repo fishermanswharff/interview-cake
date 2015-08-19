@@ -12,7 +12,7 @@ module.exports = function(config) {
     plugins: [
       'karma-browserify',
       'karma-jasmine',
-      'karma-phantomjs-launcher'
+      'karma-chrome-launcher'
     ],
     exclude: [],
     preprocessors: {
@@ -23,12 +23,19 @@ module.exports = function(config) {
       debug: true,
       transform: ['babelify'],
     },
+    // you can define custom flags
+    customLaunchers: {
+      Chrome_Harmony: {
+        base: 'ChromeCanary',
+        flags: ['--enable-javascript-harmony']
+      }
+    },
     reporters: ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome_Harmony'],
     singleRun: false
   })
 }
