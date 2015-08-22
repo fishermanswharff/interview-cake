@@ -1,36 +1,33 @@
 // Karma configuration
-// Generated on Sat Aug 15 2015 12:15:19 GMT-0400 (EDT)
+// Generated on Sun Aug 16 2015 15:09:12 GMT-0400 (EDT)
 
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['browserify','jasmine'],
     files: [
-      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
-      'spec/**/*.js',
-      'spec/**/*.es6',
       'lib/**/*.js',
-      'lib/**/*.es6',
+      'spec/**/*.js'
     ],
     plugins: [
-      'karma-babel-preprocessor',
+      'karma-browserify',
       'karma-jasmine',
-      'karma-chrome-launcher',
+      'karma-chrome-launcher'
     ],
     exclude: [],
     preprocessors: {
-      'spec/**/*.es6': ['babel'],
-      'test/**/*.es6': ['babel']
+      'lib/**/*.js': ['browserify'],
+      'spec/**/*.js': ['browserify']
     },
-    'babelPreprocessor': {
-      options: {
-        sourceMap: 'inline'
-      },
-      filename: function(file){
-        return file.originalPath.replace(/\.js$/, '.es5.js');
-      },
-      sourceFileName: function(file){
-        return file.originalPath;
+    browserify: {
+      debug: true,
+      transform: ['babelify'],
+    },
+    // you can define custom flags
+    customLaunchers: {
+      Chrome_Harmony: {
+        base: 'ChromeCanary',
+        flags: ['--enable-javascript-harmony']
       }
     },
     reporters: ['progress'],
@@ -38,7 +35,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome_Harmony'],
     singleRun: false
-  });
-};
+  })
+}

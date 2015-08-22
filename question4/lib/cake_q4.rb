@@ -1,6 +1,19 @@
+require 'pry'
+
 def condense_meetings(assoc_array)
-
-
+  sorted = assoc_array.sort
+  merged_meetings = []
+  previous_start, previous_end = sorted[0]
+  sorted[1..-1].each do |current_start, current_end|
+    if current_start <= previous_end
+      previous_end = [current_end, previous_end].max
+    else
+      merged_meetings.push([previous_start, previous_end])
+      previous_start, previous_end = current_start, current_end
+    end
+  end
+  merged_meetings.push([previous_start, previous_end])
+  merged_meetings
 end
 
 =begin

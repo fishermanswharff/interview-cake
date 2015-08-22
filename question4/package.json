@@ -1,19 +1,21 @@
 {
-  "name": "interview-cake-question4",
+  "name": "interview-cake-question3",
   "version": "0.0.1",
-  "description": "solutions and testing suite for interview cake’s question 4.",
+  "description": "solutions and testing suite for interview cake’s question 3.",
   "main": "karma.conf.js",
   "dependencies": {},
   "devDependencies": {
-    "jasmine-core": "^2.3.4",
-    "karma-jasmine": "^0.3.6",
-    "karma-chrome-launcher": "^0.2.0",
-    "karma-babel-preprocessor": "^5.2.1",
-    "babel": "^5.8.21",
-    "karma": "^0.13.9"
+    "gulp": "~3.8.11",
+    "karma": "~0.12.31",
+    "browserify": "^9.0.3",
+    "babelify": "~5.0.3",
+    "karma-browserify": "~3.0.2",
+    "karma-jasmine": "~0.3.5",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-chrome-launcher": "^0.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "author": "",
   "license": "ISC"
