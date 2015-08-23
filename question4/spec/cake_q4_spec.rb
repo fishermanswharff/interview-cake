@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rinda/tuplespace'
 require_relative '../lib/cake_q4.rb'
 
 RSpec.describe 'Interview Cake Question 4' do
