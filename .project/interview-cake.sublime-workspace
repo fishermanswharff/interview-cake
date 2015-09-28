@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"insanc",
+				"instance2"
+			],
+			[
+				"previo",
+				"previousEnd"
+			],
+			[
 				"previ",
 				"previous_meeting_end"
 			],
@@ -506,14 +514,6 @@
 			[
 				"marin",
 				"margin-bottom"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"h",
-				"html"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "/Users/jason/Documents/UI/interview-cake/question4/lib/cakeQ4.js",
 			"settings":
 			{
-				"buffer_size": 126,
+				"buffer_size": 807,
 				"line_ending": "Unix"
 			}
 		},
@@ -544,18 +544,26 @@
 			}
 		},
 		{
-			"file": "/Users/jason/Documents/UI/interview-cake/question4/spec/cakeQ4_spec.js",
+			"file": "/Users/jason/Documents/UI/interview-cake/question4/lib/cake_q4.rb",
 			"settings":
 			{
-				"buffer_size": 631,
+				"buffer_size": 3169,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/jason/Documents/UI/interview-cake/question3/spec/question3_spec.js",
+			"file": "/Users/jason/Documents/UI/interview-cake/question4/spec/cakeQ4_spec.js",
 			"settings":
 			{
-				"buffer_size": 1012,
+				"buffer_size": 1018,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jason/Documents/UI/interview-cake/extras/jasmine-examples.js",
+			"settings":
+			{
+				"buffer_size": 11628,
 				"line_ending": "Unix"
 			}
 		}
@@ -567,7 +575,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 115.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -648,7 +656,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 441.0
+		"width": 462.0
 	},
 	"console":
 	{
@@ -675,9 +683,9 @@
 	],
 	"file_history":
 	[
-		"/Users/jason/Documents/UI/interview-cake/question3/lib/cakeQ3.js",
 		"/Users/jason/Documents/UI/interview-cake/question3/spec/question3_spec.js",
 		"/Users/jason/Documents/UI/interview-cake/question4/karma.conf.js",
+		"/Users/jason/Documents/UI/interview-cake/question3/lib/cakeQ3.js",
 		"/Users/jason/Documents/UI/interview-cake/question4/package.json",
 		"/Users/jason/Documents/UI/interview-cake/.project/interview-cake.sublime-project",
 		"/Users/jason/Documents/UI/interview-cake/question4/lib/cakeQ4.js",
@@ -877,6 +885,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"instance",
+			"array",
+			"arrays",
 			"value",
 			"previous_meeting_start",
 			"meeting",
@@ -1001,10 +1012,7 @@
 			"'); ",
 			"didScroll",
 			"angular",
-			"noscroll",
-			";\n",
-			"clicked",
-			"visibility"
+			"noscroll"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1057,26 +1065,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 126,
+						"buffer_size": 807,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								81,
-								81
+								807,
+								807
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1092,8 +1100,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								920,
+								928
 							]
 						],
 						"settings":
@@ -1106,15 +1114,9 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 2,
 					"file": "/Users/jason/Documents/UI/interview-cake/question4/spec/cake_q4_spec.rb",
@@ -1128,8 +1130,8 @@
 						"selection":
 						[
 							[
-								553,
-								621
+								21,
+								21
 							]
 						],
 						"settings":
@@ -1142,29 +1144,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 3,
-					"file": "/Users/jason/Documents/UI/interview-cake/question4/spec/cakeQ4_spec.js",
+					"file": "/Users/jason/Documents/UI/interview-cake/question4/lib/cake_q4.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 631,
+						"buffer_size": 3169,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								356,
-								356
+								395,
+								395
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1172,24 +1180,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/jason/Documents/UI/interview-cake/question3/spec/question3_spec.js",
+					"file": "/Users/jason/Documents/UI/interview-cake/question4/spec/cakeQ4_spec.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1012,
+						"buffer_size": 1018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								842,
+								842
 							]
 						],
 						"settings":
@@ -1203,6 +1211,36 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/jason/Documents/UI/interview-cake/extras/jasmine-examples.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1236,7 +1274,7 @@
 		"cols":
 		[
 			0.0,
-			0.436610671937,
+			0.486731101779,
 			1.0
 		],
 		"rows":
@@ -1389,9 +1427,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "react",
 		"selected_items":
 		[
+			[
+				"react",
+				"~/Documents/Projects/react-playground/.project/react-playground.sublime-project"
+			],
 			[
 				"",
 				"~/Documents/WebDevImmersive/WebDevImmersiveMasterProject.sublime-project"
@@ -1412,7 +1454,7 @@
 		],
 		"width": 378.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1420,7 +1462,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 175.0,
+	"side_bar_width": 198.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
