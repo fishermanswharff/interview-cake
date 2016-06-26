@@ -1,8 +1,13 @@
 require 'pry'
 
 def condense_meetings(assoc_array)
+  # if we KNOW that the 'first' meeting's start time was before the 'second'
+  # we know that the adjacent meetings potentially could be merged
   sorted = assoc_array.sort
+  # we'll store our merged meetings in a new array,
+  # and make one pass through the assoc_array of meeting times
   merged_meetings = []
+  # take the first meeting and throw it into variables we can use
   previous_start, previous_end = sorted[0]
   sorted[1..-1].each do |current_start, current_end|
     if current_start <= previous_end
@@ -71,7 +76,7 @@ merged into other meetings as well.
 
 Make sure that your function won't "leave out" the last meeting.
 
-We can do this in O(nlogn) time.
+We can do this in O(n lg n) time.
 
 We can tell the meetings overlap because the end time of the first
 meeting is AFTER or THE SAME AS the start of the second meeting. The first

@@ -11,8 +11,14 @@ RSpec.describe 'Product of 3 Ints' do
   describe '#product_of_ints' do
     it('returns the highest product you can get from any 3 integers in the array') do
       expect(highest_product_from_three_ints(array1)).to eq 152685
+    end
+    it('returns the highest product you can get from any 3 integers in the array') do
       expect(highest_product_from_three_ints(array2)).to eq 2184
+    end
+    it('returns the highest product you can get from any 3 integers in the array') do
       expect(highest_product_from_three_ints(array3)).to eq 60
+    end
+    it('returns the highest product you can get from any 3 integers in the array') do
       expect(highest_product_from_three_ints(array4)).to eq 300
     end
   end

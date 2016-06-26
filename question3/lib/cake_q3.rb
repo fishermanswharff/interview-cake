@@ -3,23 +3,25 @@ require 'byebug'
 Given an array_of_ints, find the highest_product you can get from three of the integers.
 The input array_of_ints will always have at least three integers.
 
-let(:array1){ [2,1,4,3,7,34,12,87,45,39,6,5,23] }
-let(:array2){ [1,2,3,4,5,6,7,8,9,10,11,12,13,14] }
-let(:array3){ [2,3,4,5] }
-expect(highest_product_from_three_ints(array1)).to eq 152685
-expect(highest_product_from_three_ints(array2)).to eq 2184
-expect(highest_product_from_three_ints(array3)).to eq 60
+we can use the greedy approach here again.
+the best answer so far will be the highest product from 3 integers
 =end
 
 def highest_product_from_three_ints(array)
   if array.length < 3
     raise StandardError.new('Array must be longer than 3 integers')
   end
+  # start by assigning the lowest int to the min between the first two ints in the array
   lowest = [array[0], array[1]].min
+  # start by assigning the highest to the max of the first 2 ints in the array
   highest = [array[0], array[1]].max
+  # we'll start to keep the high/low product of 2
   lowest_product_of_2 = array[0] * array[1]
   highest_product_of_2 = array[0] * array[1]
+  # start with the default value of the highest_product_of_3
   highest_product_of_3 = array[0] * array[1] * array[2]
+  # since we defaulted using the first 2 values in the array (indices 0 & 1)
+  # we start iterating through the array at index 2
   for i in 2..array.length - 1
     highest_product_of_3 = [highest_product_of_3, array[i] * highest_product_of_2, array[i] * lowest_product_of_2].max
     highest_product_of_2 = [highest_product_of_2, array[i] * highest, array[i] * lowest].max
