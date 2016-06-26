@@ -1,23 +1,41 @@
 require 'pry'
+# You have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
+
+# [1,2,6,5,9]
 def get_products_of_all_ints_except_at_index(array)
   products_of_ints_except_at_index = [1] * array.length # => [1,1,1,1,1]
+
+  # iterate through forwards, storing the products of all ints BEFORE the index
   product = 1
   i = 0
-  while i < array.length # [1,2,6,5,9]
+  while i < array.length
     products_of_ints_except_at_index[i] = product
+    # [1,1,1,1,1]
+    # [1,1,1,1,1]
+    # [1,1,2,1,1]
+    # [1,1,2,12,1]
+    # [1,1,2,12,60]
     product *= array[i]
+    # 1,2,12,60,540
     i += 1
   end
+
+  # iterate through backwards, storing the products of all ints AFTER the index
   product = 1
   i = array.length - 1
   while i >= 0
     products_of_ints_except_at_index[i] *= product
+    # [1,1,2,12,60]
+    # [1,1,2,108,60]
+    # [1,1,90,108,60]
+    # [1,270,90,108,60]
+    # [540,270,90,108,60]
     product *= array[i]
+    # 9,45,270,540,540
     i -= 1
   end
   products_of_ints_except_at_index
 end
-
 
 # a brute force approach would use two loops to multiply the integer at every index by the integer at every nested_index, unless index == nested_index
 # we're wasting a lot of time doing the same calculations.
@@ -86,7 +104,7 @@ end
 
 # and this gives us what we're looking for:
 # the products of all integers except the integer at each index
-# knowing this, can we eliminate any of the arrays to reduct the memory we use?
+# knowing this, can we eliminate any of the arrays to reduce the memory we use?
 # instead of building the second array products_of_int_after_index,
 # we could take the product we would have stored and just multiply it by the matching integer in products_of_ints_before_index
 
