@@ -29,12 +29,15 @@ def get_best_profit(stock_prices_yesterday)
   max_profit
 end
 
-# p get_best_profit(stock_prices_yesterday)
+=begin
 
-# def get_best_profit(stock_prices_yesterday):
-#   min_price = stock_prices_yesterday[0]
-#   max_profit = 0
-#   for current_price in stock_prices_yesterday:
-#       min_price = min(min_price, current_price)
-#       max_profit = max(max_profit, current_price - min_price)
-#   return max_profit
+Greedy approach is often a great way to break down a new question.
+
+"Suppose we could come up with the answer in one pass through the input by simply updating the best answer so far as we went."
+What additional values would we need to keep as we looked at each item in our set in order to be able to produce the best answer so far in constant time?
+
+In this case:
+  The best answer so far is the max profit, based on the prices we've seen so far.
+  The additional value is the minimum price we've seen so far.
+
+=end
