@@ -51,9 +51,14 @@ RSpec.describe BinaryTreeNode do
 
   describe '#dfs' do
     it 'Outputs: All vertices reachable from vertex labeled as discovered' do
-      binding.pry
       # expect(root.dfs(39)).to be_a BinaryTreeNode
       # expect(root.dfs(39)).to eq #<BinaryTreeNode:0x007f98e2ad6538 @left_branch=nil, @name="thirty-nine", @observed=true, @right_branch=nil, @value=39>
+    end
+  end
+
+  describe '#is_balanced?' do
+    it 'returns true if the difference between the depths of any two leaf nodes is no greater than one.' do
+      expect(root.is_balanced?(root)).to eq false
     end
   end
 end

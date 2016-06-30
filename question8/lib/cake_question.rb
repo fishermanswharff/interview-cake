@@ -43,13 +43,30 @@ class BinaryTreeNode
     end
   end
 
-=begin
-1  procedure DFS(G,v):
-2      label v as discovered
-3      for all edges from v to w in G.adjacentEdges(v) do
-4          if vertex w is not labeled as discovered then
-5              recursively call DFS(G,w)
-=end
+  def is_balanced?(node = self)
+    depths = []
+    nodes = []
+    nodes.push([node,0])
+    while !nodes.empty?
+      node, depth = nodes.pop
+      if !node.left_branch || !node.right_branch
+        if !depths.include? depth
+          depths.push(depth)
+          if (depths.length > 2) || (depths.length == 2 && (depths[0] - depths[1]).abs > 1)
+            return false
+          end
+        end
+      else
+        if node.left_branch
+          nodes.push([node.left_branch, depth + 1])
+        end
+        if node.right_branch
+          nodes.push([node.right_branch, depth + 1])
+        end
+      end
+    end
+    return true
+  end
 
   def destroy(value)
   end
