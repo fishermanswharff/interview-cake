@@ -39,7 +39,7 @@ class BinaryTreeNode
   def dfs(node = self)
     node.observed = true
     for child in node.children
-      dfs(child)
+      dfs(child) unless child.observed
     end
   end
 
@@ -47,7 +47,7 @@ class BinaryTreeNode
     stack = []
     stack.push([node, -Float::INFINITY, Float::INFINITY])
     while !stack.empty?
-      puts stack
+      # puts stack
       node, lower_bounds, upper_bounds = stack.pop
       if node.value < lower_bounds || node.value > upper_bounds
         return false
