@@ -86,6 +86,24 @@ class BinaryTreeNode
     return true
   end
 
+  def largest(node = self)
+    while node.right_branch
+      return largest(node.right_branch)
+    end
+    return node
+  end
+
+  def second_largest_node(node = self)
+    return nil if !node
+    if node.left_branch && !node.right_branch
+      return node.left_branch.largest
+    end
+    if node.right_branch && !node.right_branch.left_branch && !node.right_branch.right_branch
+      return node
+    end
+    return node.second_largest_node(node.right_branch)
+  end
+
   def destroy(value)
   end
 end
